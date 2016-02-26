@@ -1,6 +1,6 @@
 package projectEulerLibrary;
 
-import projectEulerLibrary50.Problem015;
+import projectEulerLibrary50.Problem017;
 
 public class ProjectEulerMainEngine {
 
@@ -8,7 +8,7 @@ public class ProjectEulerMainEngine {
 
 		final long startTime = System.currentTimeMillis();
 
-		new Problem015().ProblemSolver();
+		new Problem017().ProblemSolver();
 
 		final long endTime = System.currentTimeMillis();
 

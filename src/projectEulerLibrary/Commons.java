@@ -1,5 +1,6 @@
 package projectEulerLibrary;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -358,5 +359,23 @@ public class Commons {
 			}
 		}
 		return countOfFactors;
+	}
+
+	/**
+	 * Converts the given number into an array of digits
+	 * 
+	 * @param num
+	 *            Number to be converted to array of digits
+	 * @return An integer array containing the digits of the given number
+	 */
+	public List<Integer> ConvertNumberToArrayOfDigits(BigInteger num) {
+		List<Integer> list = new ArrayList<Integer>();
+		BigInteger ten = BigInteger.valueOf(10);
+		while (num.compareTo(BigInteger.ZERO) > 0) {
+			BigInteger digit = num.mod(ten);
+			list.add(digit.intValue());
+			num = (num.subtract(digit)).divide(ten);
+		}
+		return list;
 	}
 }
